@@ -84,7 +84,6 @@ button {
 .colors .color:hover {
     width: 25%;
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */ /* see about it later */
-
 }
 
 .colors .color > div {
@@ -116,4 +115,37 @@ button {
     color: #2B283A;
     font-size: 1.2rem;
     font-weight: 500;
+    user-select: all;
+    position: relative;
+}
+
+.colors .hex .copied {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 17px;
+    color: white;
+    background-color:#00cf00;
+    border-radius: 4px;
+    animation: copy 3.5s forwards ease-in-out;
+    user-select: none;
+}
+
+@keyframes copy {
+    0% {
+        opacity: 0;
+        display: block;
+    }
+    10% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
